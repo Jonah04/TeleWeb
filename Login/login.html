@@ -21,30 +21,50 @@
                     fill="#fff" /></svg>
         </div>
         <div class="mt-5  text-center welcome font-semibold">Sign in to Telegram</div>
-        <div class="mt-1 text-center conf mx-auto text-gray-600">Please confirm your country and even your phone Number
+        <div class="mt-1 text-center conf mx-auto text-gray-600">
+            Please confirm your country and even your phone Number
         </div>
         <div class="w-50p mt-8 bg-gray-500 mx-auto border h-1/2 "></div>
         <div class="w-50p mt-2 focus:top-0 mx-auto rounded-lg  ">
-            <select class="w-full text-gray-500 text-xs focus:border-blue-500 rounded-lg focus:border-2 outline-none shadow-inner h-8  border-gray-400">
-                <option  value="volvo">Country</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
+            <!-- This Select tag requires change -->
+            <select class="w-full p-2 text-gray-500 text-xs focus:border-blue-500 focus:border-2 rounded-lg outline-none  shadow-inner h-8  border-gray-400">
+                <option data-countryCode="AD" value="376">Andorra (+376)</option>
+                <option data-countryCode="AO" value="244">Angola (+244)</option>
+                <option data-countryCode="AI" value="1264">Anguilla (+1264)</option>
+                <option data-countryCode="AG" value="1268">Antigua &amp; Barbuda (+1268)</option>
+                <option data-countryCode="AR" value="54">Argentina (+54)</option>
+                <option data-countryCode="AM" value="374">Armenia (+374)</option>
             </select>
         </div>
+
         <div class="w-50p mt-4  mx-auto ">
-            <input class="p-1 px-2 w-full border-2 outline-none rounded-lg focus:border-blue-500 text-sm" type="text" placeholder="Phone Number">
+            <input class="p-2 px-2 w-full border-2 outline-none rounded-lg focus:border-blue-500 text-xs" type="text" placeholder="Phone Number">
         </div>
         <div class="p-4 mx-auto w-50p ">
-            <input class="" type="checkbox" checked name="sessionize" id="check">
-            <label class="mb-3 pl-3 text-xs pb-1" for="check">
-                keep me signed in
+            <label class="flex items-start">
+                <div
+                    class="bg-white border-2 rounded  w-4 h-4 flex flex-shrink-0 justify-center items-center mr-2 focus:bg-blue-500 ">
+                    <input type="checkbox" class="opacity-0  absolute">
+                    <svg class="fill-current hidden w-3 h-2 w-full h-full rounded-sm bg-blue-500 text-green-100 pointer-events-none"
+                        viewBox="0 0 20 20">
+                        <path d="M0 11l2-2 5 5L18 3l2 2L7 18z" /></svg>
+                </div>
+                <div class="select-none text-xs">keep me signed in</div>
             </label>
+        </div>
+        <div class="flex flex-col mt-8 w-50p mx-auto">
+            <button type="submit" class="bg-blue-500 hover:bg-blue-500 text-white text-sm font-semibold py-2 px-4 rounded-lg">
+                Next
+            </button>
         </div>
     </div>
 
 </body>
 <style>
+    input:checked+svg {
+        display: block;
+    }
+    
     @media (min-width: 640px) {
         .cont {
             margin-left: 5rem;
